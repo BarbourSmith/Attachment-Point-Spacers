@@ -8,17 +8,186 @@
     "topLevel": true,
     "allAtoms": [
         {
+            "atomType": "Molecule",
+            "name": "Spacer",
+            "x": 0.23718887262079066,
+            "y": 0.3091603053435114,
+            "uniqueID": 233461,
+            "ioValues": [
+                {
+                    "name": "Height",
+                    "ioValue": 40
+                }
+            ],
+            "topLevel": false,
+            "allAtoms": [
+                {
+                    "atomType": "Input",
+                    "name": "Height",
+                    "x": 0.013333333333333334,
+                    "y": 0.1984732824427481,
+                    "uniqueID": 774008,
+                    "ioValues": []
+                },
+                {
+                    "atomType": "Circle",
+                    "name": "Circle",
+                    "x": 0.11054172767203513,
+                    "y": 0.49236641221374045,
+                    "uniqueID": 687510,
+                    "ioValues": [
+                        {
+                            "name": "diameter",
+                            "ioValue": 10
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Extrude",
+                    "name": "Extrude",
+                    "x": 0.5505124450951684,
+                    "y": 0.450381679389313,
+                    "uniqueID": 881770,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "atoms/596019/233461/673188Difference"
+                        },
+                        {
+                            "name": "height",
+                            "ioValue": 40
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Circle",
+                    "name": "Circle",
+                    "x": 0.1844802342606149,
+                    "y": 0.7824427480916031,
+                    "uniqueID": 891934,
+                    "ioValues": [
+                        {
+                            "name": "diameter",
+                            "ioValue": 25
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Difference",
+                    "name": "Difference",
+                    "x": 0.39751098096632503,
+                    "y": 0.7366412213740459,
+                    "uniqueID": 673188,
+                    "ioValues": [
+                        {
+                            "name": "geometry2",
+                            "ioValue": "atoms/596019/233461/687510Circle"
+                        },
+                        {
+                            "name": "geometry1",
+                            "ioValue": "atoms/596019/233461/891934Circle"
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Output",
+                    "name": "Output",
+                    "x": 0.9860907759882871,
+                    "y": 0.5229007633587786,
+                    "uniqueID": 900789,
+                    "ioValues": [
+                        {
+                            "name": "number or geometry",
+                            "ioValue": "atoms/596019/233461/881770Extrude"
+                        }
+                    ]
+                }
+            ],
+            "allConnectors": [
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "height",
+                    "ap2Primary": false,
+                    "ap1ID": 774008,
+                    "ap2ID": 881770
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry2",
+                    "ap2Primary": false,
+                    "ap1ID": 687510,
+                    "ap2ID": 673188
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "number or geometry",
+                    "ap2Primary": false,
+                    "ap1ID": 881770,
+                    "ap2ID": 900789
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry1",
+                    "ap2Primary": false,
+                    "ap1ID": 891934,
+                    "ap2ID": 673188
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 673188,
+                    "ap2ID": 881770
+                }
+            ],
+            "fileTypeVersion": 1,
+            "simplify": false
+        },
+        {
+            "atomType": "Group",
+            "name": "Group",
+            "x": 0.4136163982430454,
+            "y": 0.46564885496183206,
+            "uniqueID": 205264,
+            "ioValues": [
+                {
+                    "name": "3D shape 1",
+                    "ioValue": 10
+                }
+            ]
+        },
+        {
             "atomType": "Output",
             "name": "Output",
             "x": 0.9853587115666179,
             "y": 0.5,
             "uniqueID": 167571,
-            "ioValues": []
+            "ioValues": [
+                {
+                    "name": "number or geometry",
+                    "ioValue": "atoms/596019/205264Group"
+                }
+            ]
         }
     ],
-    "allConnectors": [],
+    "allConnectors": [
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "3D shape 1",
+            "ap2Primary": false,
+            "ap1ID": 233461,
+            "ap2ID": 205264
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": 205264,
+            "ap2ID": 167571
+        }
+    ],
     "fileTypeVersion": 1,
     "simplify": false,
     "filetypeVersion": 1,
-    "circleSegmentSize": 2
+    "circleSegmentSize": "0.051"
 }
